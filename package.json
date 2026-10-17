@@ -1,0 +1,44 @@
+{
+  "name": "@local/dsh-kasumi-websearch",
+  "version": "0.3.14",
+  "private": true,
+  "type": "module",
+  "description": "通过 Kasumi 中转站提供真实网页搜索，复用现有客户端凭据。",
+  "exports": {
+    ".": "./src/index.js",
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "files": [
+    "src",
+    "locale",
+    "cordis.patch.yml",
+    "README.md"
+  ],
+  "peerDependencies": {
+    "@deepseek-ai/schemastery": "3.18.5",
+    "@deepseek-ai/dsh-web": "0.2.1-rc.1 || 0.2.1-rc.2",
+    "@deepseek-ai/dsh-credentials": "0.2.1-rc.1 || 0.2.1-rc.2"
+  },
+  "scripts": {
+    "test": "node --test tests/*.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AsakuraAOI/dsh-kasumi-websearch.git"
+  },
+  "homepage": "https://github.com/AsakuraAOI/dsh-kasumi-websearch#readme",
+  "bugs": {
+    "url": "https://github.com/AsakuraAOI/dsh-kasumi-websearch/issues"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness"
+  ]
+}

@@ -1,0 +1,12 @@
+- insert:
+    - id: hiagent-web-search
+      name: '@local/dsh-kasumi-websearch'
+      config:
+        baseURL: https://api.asakuraaoi.cn
+        apiKeyRef: HIAGENT_API_KEY
+        timeoutMs: 20000
+        maxResults: 10
+- id: web
+  config:
+    searchProvider: hiagent-websearch
+    fetchProvider: hiagent-webfetch
